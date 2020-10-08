@@ -1,5 +1,12 @@
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
+
+
+-- blalbla
+
+
+
+
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
@@ -607,5 +614,13 @@ awful.spawn.with_shell("sh /opt/urserver/urserver-start --no-manager --no-notify
 awful.spawn.with_shell("numlockx on")
 
 awful.spawn.with_shell("udiskie")
+
+
+
+
+
+
+
+
 
 
