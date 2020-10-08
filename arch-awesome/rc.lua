@@ -1,12 +1,5 @@
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
-
-
--- blalbla
-
-
-
-
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
@@ -295,24 +288,27 @@ globalkeys = gears.table.join(
               {description = "open thunar", group = "launcher"}),
 
 
-awful.key({ modkey,           }, "a", function () awful.spawn("gedit") end,
+awful.key({ modkey,           }, "a", function () awful.spawn("pluma") end,
               {description = "open gedit", group = "launcher"}),
 
 awful.key({ modkey,           }, "z", function () awful.spawn("evince") end,
               {description = "open evince", group = "launcher"}),
               
-awful.key({ modkey,           }, "c", function () awful.spawn("gnome-calculator") end,
+awful.key({ modkey,           }, "c", function () awful.spawn("mate-calculator") end,
               {description = "open calculator", group = "launcher"}),              
              
 
 awful.key({ modkey,           }, "v", function () awful.spawn("celluloid") end,
               {description = "open celluloid", group = "launcher"}),      
-                     
+
+
+
 awful.key({ modkey,           }, "F12", function () awful.spawn("pavucontrol") end,
               {description = "open pavucontrol", group = "launcher"}),       
 
 	
-
+awful.key({ modkey,           }, "b", function () awful.spawn("deadbeef") end,
+              {description = "open Deadbeef", group = "launcher"}),
 
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -604,23 +600,19 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 
 --awful.spawn.easy_async_with_shell("/opt/urserver/urserver --daemon")
---awful.spawn.easy_async("/opt/urserver/urserver --daemon")
+--awful.spawn.easy_async("expressvpn connect fr")
+
+
+
 awful.spawn.with_shell("sh /opt/urserver/urserver-start --no-manager --no-notify")
-
-
-
 
 
 awful.spawn.with_shell("numlockx on")
 
+
+--awful.spawn.with_shell("expressvpn connect fr")
+
+
 awful.spawn.with_shell("udiskie")
-
-
-
-
-
-
-
-
 
 
