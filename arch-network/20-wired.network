@@ -1,0 +1,15 @@
+
+
+# path : /etc/systemd/network/20-wired.network
+
+
+
+[Match]
+Name=enp2s0
+
+[Network]
+DHCP=yes
+
+[DHCP]
+RouteMetric=10
+UseDNS=false
