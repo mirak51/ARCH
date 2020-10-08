@@ -1,0 +1,17 @@
+
+
+systemctl start smb
+systemctl start nmb
+
+Vous pouvez l'activer pour un démarrage automatique :
+
+systemctl enable smb
+systemctl enable nmb
+
+
+Although the user name is shared with Linux system, Samba uses a password separate from that of the Linux user accounts. Replace samba_user with the chosen Samba user account:
+
+# smbpasswd -a samba_user
+
+
+
