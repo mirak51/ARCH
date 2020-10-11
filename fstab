@@ -1,0 +1,24 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sdb3
+UUID=3d48996f-4904-4482-8b99-21fdde39159b	/         	ext4      	rw,relatime	0 1
+
+# /dev/sdb2
+UUID=905a56d8-206c-4aea-9e3e-f24dc085b63c	none      	swap      	defaults  	0 0
+
+
+# UUID=DA2C19372C190FDD /media/WINDOWS ntfs-3g  defaults,windows_names,locale=fr_FR.UTF-8	0	0
+
+
+
+# UUID=7CFC8992FC8946FC /media/USER_FOLDERS ntfs-3g  defaults,windows_names,locale=fr_FR.UTF-8	0	0
+
+
+
+
+ UUID=56242B3E242B208B /media/DATA  ntfs-3g  defaults,windows_names,locale=fr_FR.UTF-8	0	0
+
+
+
