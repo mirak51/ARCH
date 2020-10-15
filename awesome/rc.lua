@@ -48,8 +48,16 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "terminator"
-editor = os.getenv("EDITOR") or "nano"
+
+ terminal = "alacritty"
+
+--terminal = "alacritty" 
+  --terminal = "kitty"
+--terminal = "termite"
+
+--terminal = "terminator"
+
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -278,37 +286,42 @@ globalkeys = gears.table.join(
 
     -- Standard program
     
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey,           }, "d", function () awful.spawn("kolourpaint") end,
+              {description = "open Kolourpaint", group = "launcher"}),
+    
+
+
+ awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
  
    awful.key({ modkey,           }, "i", function () awful.spawn("firefox") end,
-              {description = "open firefox", group = "launcher"}),
+              {description = "open Firefox", group = "launcher"}),
 
  awful.key({ modkey,           }, "e", function () awful.spawn("thunar") end,
-              {description = "open thunar", group = "launcher"}),
+              {description = "open Thunar", group = "launcher"}),
 
 
 awful.key({ modkey,           }, "a", function () awful.spawn("pluma") end,
-              {description = "open gedit", group = "launcher"}),
+              {description = "open Pluma", group = "launcher"}),
 
 awful.key({ modkey,           }, "z", function () awful.spawn("evince") end,
-              {description = "open evince", group = "launcher"}),
+              {description = "open Evince", group = "launcher"}),
               
 awful.key({ modkey,           }, "c", function () awful.spawn("mate-calculator") end,
-              {description = "open calculator", group = "launcher"}),              
+              {description = "open Calculator", group = "launcher"}),              
              
 
-awful.key({ modkey,           }, "v", function () awful.spawn("celluloid") end,
-              {description = "open celluloid", group = "launcher"}),      
+awful.key({ modkey,           }, "v", function () awful.spawn("deadbeef") end,
+              {description = "open Deadbeef", group = "launcher"}),      
 
 
 
 awful.key({ modkey,           }, "F12", function () awful.spawn("pavucontrol") end,
-              {description = "open pavucontrol", group = "launcher"}),       
+              {description = "open Pavucontrol", group = "launcher"}),       
 
 	
-awful.key({ modkey,           }, "b", function () awful.spawn("deadbeef") end,
-              {description = "open Deadbeef", group = "launcher"}),
+awful.key({ modkey,           }, "b", function () awful.spawn("libreoffice \\--writer") end,
+              {description = "open Libreoffice", group = "launcher"}),
 
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -371,8 +384,23 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    
+
+awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
+    
+
+
+awful.key({ "Mod1"  }, "F4",      function (c) c:kill()                         end,
+              {description = "close", group = "client"}),
+
+   
+
+
+
+
+
+
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
@@ -609,10 +637,12 @@ awful.spawn.with_shell("sh /opt/urserver/urserver-start --no-manager --no-notify
 
 awful.spawn.with_shell("numlockx on")
 
+-- awful.spawn.with_shell("volumeicon")
+--awful.spawn.with_shell("nm-applet")
 
 --awful.spawn.with_shell("expressvpn connect fr")
 
 
-awful.spawn.with_shell("udiskie")
+--awful.spawn.with_shell("udiskie")
 
 
