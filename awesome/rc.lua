@@ -634,7 +634,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.spawn.with_shell("sh /opt/urserver/urserver-start --no-manager --no-notify")
 
-
+--awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+awful.spawn.with_shell("/usr/bin/lxpolkit") 
 awful.spawn.with_shell("numlockx on")
 
 -- awful.spawn.with_shell("volumeicon")
