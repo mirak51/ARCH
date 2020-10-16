@@ -297,7 +297,7 @@ globalkeys = gears.table.join(
    awful.key({ modkey,           }, "i", function () awful.spawn("firefox") end,
               {description = "open Firefox", group = "launcher"}),
 
- awful.key({ modkey,           }, "e", function () awful.spawn("thunar") end,
+ awful.key({ modkey,           }, "e", function () awful.spawn("pcmanfm") end,
               {description = "open Thunar", group = "launcher"}),
 
 
@@ -311,8 +311,8 @@ awful.key({ modkey,           }, "c", function () awful.spawn("mate-calculator")
               {description = "open Calculator", group = "launcher"}),              
              
 
-awful.key({ modkey,           }, "v", function () awful.spawn("deadbeef") end,
-              {description = "open Deadbeef", group = "launcher"}),      
+awful.key({ modkey,           }, "v", function () awful.spawn("celluloid") end,
+              {description = "open Celluloid", group = "launcher"}),      
 
 
 
