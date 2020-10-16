@@ -297,7 +297,7 @@ globalkeys = gears.table.join(
    awful.key({ modkey,           }, "i", function () awful.spawn("firefox") end,
               {description = "open Firefox", group = "launcher"}),
 
- awful.key({ modkey,           }, "e", function () awful.spawn("pcmanfm") end,
+ awful.key({ modkey,           }, "e", function () awful.spawn("thunar") end,
               {description = "open Thunar", group = "launcher"}),
 
 
@@ -359,10 +359,18 @@ awful.key({ modkey,           }, "b", function () awful.spawn("libreoffice \\--w
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+--    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+  --            {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey }, "x",
+    awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end,
+              {description = "run dmenu", group = "launcher"}),
+    
+
+
+
+
+
+awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
                     prompt       = "Run Lua code: ",
@@ -638,7 +646,7 @@ awful.spawn.with_shell("sh /opt/urserver/urserver-start --no-manager --no-notify
 awful.spawn.with_shell("/usr/bin/lxpolkit") 
 awful.spawn.with_shell("numlockx on")
 
--- awful.spawn.with_shell("volumeicon")
+ -- awful.spawn.with_shell("volumeicon")
 --awful.spawn.with_shell("nm-applet")
 
 --awful.spawn.with_shell("expressvpn connect fr")
