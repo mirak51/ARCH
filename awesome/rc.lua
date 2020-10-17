@@ -362,7 +362,7 @@ awful.key({ modkey,           }, "b", function () awful.spawn("libreoffice \\--w
 --    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
   --            {description = "run prompt", group = "launcher"}),
 
-  awful.key({ modkey },            "r",     function () awful.spawn.with_shell("dmenu_run  -fn 'Source Code Pro 11.5'") end,
+  awful.key({ modkey },            "r",     function () awful.spawn.with_shell("/opt/dmenu/dmenu_run_history -m 0 -fn 'Source Code Pro 12'") end,
              {description = "run dmenu", group = "launcher"}),
     
 
