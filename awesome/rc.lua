@@ -311,8 +311,8 @@ awful.key({ modkey,           }, "c", function () awful.spawn("mate-calculator")
               {description = "open Calculator", group = "launcher"}),              
              
 
-awful.key({ modkey,           }, "v", function () awful.spawn("celluloid") end,
-              {description = "open Celluloid", group = "launcher"}),      
+awful.key({ modkey,           }, "v", function () awful.spawn("deadbeef") end,
+              {description = "open Deadbeef", group = "launcher"}),      
 
 
 
@@ -362,7 +362,7 @@ awful.key({ modkey,           }, "b", function () awful.spawn("libreoffice \\--w
 --    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
   --            {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end,
+    awful.key({ modkey },            "r",     function () awful.spawn.with_shell("dmenu_run") end,
               {description = "run dmenu", group = "launcher"}),
     
 
