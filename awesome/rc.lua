@@ -45,7 +45,29 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+--beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+
+
+--beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+
+beautiful.init("~/.config/awesome/themes/theme.lua")
+
+
+
+
+-------------------------------!!!!!!!!!!!!!!HEEEEEEEEEEEERE !!!!!!!!!!-------------------------------!
+
+
+
+
+
+
+
+
+--awful.util.tagnames = {  " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  }
+--awful.util.tagnames = { " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX " }
+
+
 
 -- This is used later as the default terminal and editor to run.
 
@@ -181,7 +203,14 @@ awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
   -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
-    awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[1])
+    --awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[1])
+ --awful.tag({  " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  }, s, awful.layout.layouts[1])
+
+
+awful.tag({  " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX "  }, s, awful.layout.layouts[1])
+
+
+
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -320,8 +349,8 @@ awful.key({ modkey,           }, "a", function () awful.spawn("pluma") end,
 awful.key({ modkey,           }, "z", function () awful.spawn("evince") end,
               {description = "open Evince", group = "launcher"}),
               
-awful.key({ modkey,           }, "c", function () awful.spawn("mate-calculator") end,
-              {description = "open Calculator", group = "launcher"}),              
+awful.key({ modkey,           }, "c", function () awful.spawn("galculator") end,
+              {description = "Galculator", group = "launcher"}),              
              
 
 awful.key({ modkey,           }, "v", function () awful.spawn("deadbeef") end,
@@ -578,7 +607,10 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          "Arandr",
+          
+		  "Galculator",
+		  "Gnome-font-viewer",
+		  "Arandr",
           "Blueman-manager",
           "Gpick",
           "Kruler",
@@ -599,7 +631,7 @@ awful.rules.rules = {
           "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
-      }, properties = { floating = true }},
+      }, properties = { floating = true, x = 1200, y = 150 }},
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
@@ -615,24 +647,15 @@ awful.rules.rules = {
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
 client.connect_signal("manage", function (c)
+
+
+
+
+
+
+
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  if not awesome.startup then awful.client.setslave(c) end
@@ -729,6 +752,7 @@ awful.spawn.with_shell("numlockx on")
 --awful.spawn.with_shell("/usr/bin/thunar --daemon")
 
 
+  --awful.spawn.with_shell("compton")
 
  -- awful.spawn.with_shell("volumeicon")
 --awful.spawn.with_shell("nm-applet")
