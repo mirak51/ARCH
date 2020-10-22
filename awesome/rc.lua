@@ -51,6 +51,8 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
  terminal = "alacritty"
 
+ --terminal = "xfce4-terminal"
+
 --terminal = "alacritty" 
   --terminal = "kitty"
 --terminal = "termite"
@@ -177,7 +179,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    --awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+  -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
     awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[1])
 
@@ -284,9 +286,18 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
         
         
-        
+         
+
+
+
+
+
 
     -- Standard program
+
+
+
+
     
     awful.key({ modkey,           }, "d", function () awful.spawn("kolourpaint") end,
               {description = "open Kolourpaint", group = "launcher"}),
@@ -328,8 +339,40 @@ awful.key({ modkey,           }, "b", function () awful.spawn("libreoffice \\--w
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+
+
+
+
+
+
+  --  awful.key({ modkey, "Shift"   }, "e", awesome.quit,
+   --           {description = "quit awesome", group = "awesome"}),
+
+
+
+ 
+
+awful.key({ modkey, "Shift"   }, "e",  function () awful.spawn.with_shell( " ~/.extinction/prompt") end,
               {description = "quit awesome", group = "awesome"}),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -393,7 +436,7 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     
 
-awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+awful.key({ modkey, "Shift"   }, "w",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     
 
@@ -642,11 +685,24 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("sh /opt/urserver/urserver-start --no-manager --no-notify")
 
 --awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+
+
+
+
+
+--------------------------------------------------------------
+
 awful.spawn.with_shell("/usr/bin/lxpolkit") 
 awful.spawn.with_shell("numlockx on")
 
+
+
+--awful.spawn.with_shell("/usr/bin/thunar --daemon")
+
+
+
  -- awful.spawn.with_shell("volumeicon")
-awful.spawn.with_shell("nm-applet")
+--awful.spawn.with_shell("nm-applet")
 
 --awful.spawn.with_shell("expressvpn connect fr")
 
