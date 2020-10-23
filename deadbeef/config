@@ -5,7 +5,7 @@ deadbeef_version 1.8.4
 filechooser.lastdir file:///home/mirak/Music/2012_mark_knopfler_privateering/cd_1
 gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Artiste / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"229","align":"0","color_override":"0","color":"#ff000000"},{"title":"Piste","id":"-1","format":"%tracknumber%","sort_format":"","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Titre","id":"-1","format":"%title%","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Durée","id":"-1","format":"%length%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"}]
 gtkui.eq.visible 0
-gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 width=1918 {} } 
+gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 width=854 {} } 
 gtkui.override_listview_colors 0
 gtkui.statusbar.visible 1
 gtkui.statusbar_seltime 1
@@ -57,30 +57,30 @@ logwindow.geometry.w 400
 logwindow.geometry.x 40
 logwindow.geometry.y 40
 mainwin.geometry.h 453
-mainwin.geometry.maximized 1
+mainwin.geometry.maximized 0
 mainwin.geometry.w 854
-mainwin.geometry.x 942
-mainwin.geometry.y 38
+mainwin.geometry.x 642
+mainwin.geometry.y 213
 network.proxy.port 8080
 output_plugin pulseaudio
 playback.loop 0
-playback.volume 0.0000000
+playback.volume -2.000000
 playlist.current 1
 playlist.cursor.0 -1
-playlist.cursor.1 4
+playlist.cursor.1 0
 playlist.scroll.0 0
-playlist.scroll.1 -4
+playlist.scroll.1 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 Par défaut
 playlist.tab.00001 Default
 prefwin.geometry.h 558
 prefwin.geometry.w 1013
-prefwin.geometry.x 212
-prefwin.geometry.y 407
+prefwin.geometry.x 0
+prefwin.geometry.y 520
 resume.paused 0
 resume.playlist 1
-resume.position 14.024897
-resume.track 4
+resume.position 38.052375
+resume.track 0
 resume_last_session 0
 streamer.samplerate 44100
 streamer.samplerate_mult_44 44100

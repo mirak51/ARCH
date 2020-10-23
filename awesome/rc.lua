@@ -201,14 +201,13 @@ awful.screen.connect_for_each_screen(function(s)
  --awful.tag({  " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  }, s, awful.layout.layouts[1])
 
 
-awful.tag({  "          ", "          ",  "         ", "     ♫    ", "         " }, s, awful.layout.layouts[1])
+awful.tag({  "        ", "        ", "        ", "    ♫    ", "       " }, s, awful.layout.layouts[1])
 
 
 
 --awful.tag({  " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX "  }, s, awful.layout.layouts[1])
 
 --awful.tag({  " 1-MAIN ", " 2-WWW ", " 3-DOC ", " 4-SYS ", " 5-VBOX ", " 6-CHAT ", " 7-MUS ", " 8-VID ", " 9-GFX "  }, s, awful.layout.layouts[1])
-
 
 
 
@@ -359,8 +358,8 @@ globalkeys = gears.table.join(
 awful.key({ modkey,           }, "a", function () awful.spawn("pluma") end,
               {description = "open Pluma", group = "launcher"}),
 
-awful.key({ modkey,           }, "z", function () awful.spawn("evince") end,
-              {description = "open Evince", group = "launcher"}),
+awful.key({ modkey,           }, "z", function () awful.spawn("atril") end,
+              {description = "open Atril", group = "launcher"}),
               
 awful.key({ modkey,           }, "c", function () awful.spawn("galculator") end,
               {description = "Galculator", group = "launcher"}),              
@@ -399,13 +398,25 @@ awful.key({ modkey, "Shift"   }, "e",  function () awful.spawn.with_shell( " ~/.
 
 
 
+    -- Show/Hide Wibox on screen 2
+
+     awful.key({ modkey }, "F10", function ()
+         
+                local screen_2 = screen[2]
+				screen_2.mywibox.visible = not screen_2.mywibox.visible
+               
+			end,
+         {description = "toggle wibox on screen 2", group = "awesome"}),
 
 
 
+ -- Show/Hide Wibox
+    
 
+--				local my_screen = screen[2]
+--my_screen.mywibox.visible = not my_screen.mywibox.visible
 
-
-
+     
 
 
 
@@ -450,7 +461,7 @@ awful.key({ modkey, "Shift"   }, "e",  function () awful.spawn.with_shell( " ~/.
   --            {description = "run prompt", group = "launcher"}),
 
   awful.key({ modkey },            "r",     function () awful.spawn.with_shell("/opt/dmenu/dmenu_run_history -m 0 -nb '#000000'  -fn 'Source Code Pro 12'") end,
-             {description = "run dmenu", group = "launcher"}),
+             {description = "run Dmenu", group = "launcher"}),
     
 
 
@@ -612,6 +623,32 @@ awful.rules.rules = {
      }
     },
 
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+---- Set calculator in other postion than the other floating clients.
+
+-- Floating clients.
+    { rule_any = {
+   
+        class = {
+          
+
+		  "Galculator",
+		   
+          
+        },
+
+      
+      }, properties = { floating = true, x = 1230, y = 100 }},
+
+   
+
+----------------------------------------------------------------------------------------------------
+
     -- Floating clients.
     { rule_any = {
         instance = {
@@ -621,7 +658,7 @@ awful.rules.rules = {
         },
         class = {
           
-		  "Galculator",
+		--  "Galculator",
 		  "Gnome-font-viewer",
 		  "Arandr",
           "Blueman-manager",
@@ -644,7 +681,7 @@ awful.rules.rules = {
           "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
-      }, properties = { floating = true, x = 1150, y = 150 }},
+      }, properties = { floating = true, x = 1000, y = 150 }},
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
@@ -751,6 +788,16 @@ awful.spawn.with_shell("sh /opt/urserver/urserver-start --no-manager --no-notify
 
 --awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 
+
+
+
+
+
+
+local screen_2 = screen[2]
+screen_2.mywibox.visible = not screen_2.mywibox.visible
+              
+     
 
 
 
