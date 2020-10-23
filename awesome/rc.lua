@@ -398,7 +398,21 @@ awful.key({ modkey, "Shift"   }, "e",  function () awful.spawn.with_shell( " ~/.
 
 
 
-    -- Show/Hide Wibox on screen 2
+    -- Show/Hide Wibox on screen 1
+
+
+				awful.key({ modkey }, "F9", function ()
+         
+                local screen_1 = screen[1]
+				screen_1.mywibox.visible = not screen_1.mywibox.visible
+               
+			end,
+         {description = "toggle wibox on screen 1", group = "awesome"}),
+
+
+
+-- Show/Hide Wibox on screen 2
+
 
      awful.key({ modkey }, "F10", function ()
          
@@ -407,6 +421,9 @@ awful.key({ modkey, "Shift"   }, "e",  function () awful.spawn.with_shell( " ~/.
                
 			end,
          {description = "toggle wibox on screen 2", group = "awesome"}),
+
+
+ 
 
 
 
