@@ -13,41 +13,22 @@ local theme = {}
 
 --  theme.font          = "sans 8"
 
-
+--  theme.font          = "Ubuntu 11"
 
  
---theme.font          = "Noto Sans Regular 12"
- --theme.taglist_font    = "Noto Sans Regular 13"
+ theme.font          = "Symbols Nerd Font 2048-em 12"
+ 
 
- theme.font            = "Symbols Nerd Font 2048-em 12"
- theme.taglist_font    = "Symbols Nerd Font 2048-em 13"
+ -- theme.font          = "Dejavu Sans Book 11"
+ -- theme.font          = "Souce Code Pro 12"
 
+ --   theme.font          = "Fira Code Pro 11"
+ 
 
- theme.bg_normal     = "#00000a"
-
---theme.bg_normal     = "#222222"
-
-
-
---theme.bg_focus      = "#535d6c"
-
---theme.bg_focus      = "#1E1E46"
-
---theme.bg_focus      = "#1A1E2D" 
- theme.bg_focus      = "#1A1E2D" 
-
-
-
+theme.bg_normal     = "#222222"
+theme.bg_focus      = "#535d6c"
 theme.bg_urgent     = "#ff0000"
-
-
--- theme.bg_minimize   = "#444444"
-
-theme.bg_minimize   = "#2E3436"
-
-
-
-
+theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
@@ -60,28 +41,8 @@ theme.useless_gap   = dpi(1)
 
 
 theme.border_width  = dpi(1)
-
-
-
-
---theme.border_normal = "#0F4490"
-
---theme.border_focus  = "#0F4490"
-
-----test
-
---theme.border_focus  = "#1C61C4"
-
-
-theme.border_focus  = "#E66D29"
-
-
 theme.border_normal = "#000000"
-
-
-
-
---theme.border_focus  = "#535d6c"
+theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
 
 -- There are other variable sets
@@ -116,17 +77,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
-
-
-
---theme.menu_height = dpi(8)
-
 theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)
-
-
-
-
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -164,7 +116,7 @@ theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/m
 
 --theme.wallpaper = themes_path.."default/background.png"
 
-theme.wallpaper = "~/.config/awesome/themes/background.jpg"
+theme.wallpaper = "~/.config/awesome/themes/default/background.jpg"
 
 
 

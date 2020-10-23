@@ -1,12 +1,18 @@
+alsa_soundcard sysdefault:CARD=Crimson
 artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name Default
 deadbeef_version 1.8.4
-filechooser.lastdir file:///media/DATA/Download
-gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 width=500 {} } 
+filechooser.lastdir file:///home/mirak/Music/2012_mark_knopfler_privateering/cd_1
+gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Artiste / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"229","align":"0","color_override":"0","color":"#ff000000"},{"title":"Piste","id":"-1","format":"%tracknumber%","sort_format":"","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Titre","id":"-1","format":"%title%","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Durée","id":"-1","format":"%length%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.eq.visible 0
+gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 width=1918 {} } 
+gtkui.override_listview_colors 0
 gtkui.statusbar.visible 1
+gtkui.statusbar_seltime 1
 gtkui.tabscroll 0
 gtkui.titlebar_playing_tf %artist% - %title% - DeaDBeeF-%_deadbeef_version%
 gtkui.titlebar_stopped_tf DeaDBeeF-%_deadbeef_version%
+gui_plugin GTK2
 hotkey.key01 "Ctrl f" 0 0 find
 hotkey.key02 "Ctrl o" 0 0 open_files
 hotkey.key03 "Ctrl q" 0 0 quit
@@ -31,12 +37,12 @@ hotkey.key21 "Alt 7" 0 0 playlist7
 hotkey.key22 "Alt 8" 0 0 playlist8
 hotkey.key23 "Alt 9" 0 0 playlist9
 hotkey.key24 "Alt 0" 0 0 playlist10
-hotkey.key25 "z" 0 0 prev
+hotkey.key25 "p" 0 0 prev
 hotkey.key26 "x" 0 0 play
 hotkey.key27 "space" 0 0 toggle_pause
 hotkey.key28 "v" 0 0 stop
-hotkey.key29 "b" 0 0 next
-hotkey.key30 "n" 0 0 playback_random
+hotkey.key29 "n" 0 0 next
+hotkey.key30 "r" 0 0 playback_random
 hotkey.key31 "Ctrl k" 0 0 toggle_stop_after_album
 hotkey.key32 "Ctrl Down" 0 0 volume_down
 hotkey.key33 "Ctrl Up" 0 0 volume_up
@@ -46,27 +52,36 @@ hotkey.key36 "Right" 0 0 seek_1p_fwd
 hotkey.key37 "Left" 0 0 seek_1p_back
 hotkey.key38 "m" 0 0 toggle_mute
 hotkeys_created 1
-mainwin.geometry.h 300
-mainwin.geometry.w 500
-mainwin.geometry.x 349
-mainwin.geometry.y 282
+logwindow.geometry.h 200
+logwindow.geometry.w 400
+logwindow.geometry.x 40
+logwindow.geometry.y 40
+mainwin.geometry.h 453
+mainwin.geometry.maximized 1
+mainwin.geometry.w 854
+mainwin.geometry.x 942
+mainwin.geometry.y 38
 network.proxy.port 8080
-output_plugin alsa
-playback.loop 1
-playback.volume -20.71428
-playlist.current 0
-playlist.cursor.0 0
+output_plugin pulseaudio
+playback.loop 0
+playback.volume 0.0000000
+playlist.current 1
+playlist.cursor.0 -1
+playlist.cursor.1 4
 playlist.scroll.0 0
+playlist.scroll.1 -4
 playlist.scroll.cursorfollowplayback 1
-playlist.tab.00000 Default
-prefwin.geometry.h 557
-prefwin.geometry.w 896
-prefwin.geometry.x 1022
-prefwin.geometry.y 24
+playlist.tab.00000 Par défaut
+playlist.tab.00001 Default
+prefwin.geometry.h 558
+prefwin.geometry.w 1013
+prefwin.geometry.x 212
+prefwin.geometry.y 407
 resume.paused 0
-resume.playlist 0
-resume.position 5.6656671
-resume.track 0
+resume.playlist 1
+resume.position 14.024897
+resume.track 4
+resume_last_session 0
 streamer.samplerate 44100
 streamer.samplerate_mult_44 44100
 streamer.samplerate_mult_48 48000

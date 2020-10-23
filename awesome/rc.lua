@@ -63,12 +63,6 @@ beautiful.init("~/.config/awesome/themes/theme.lua")
 
 
 
-
---awful.util.tagnames = {  " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  }
---awful.util.tagnames = { " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX " }
-
-
-
 -- This is used later as the default terminal and editor to run.
 
  terminal = "alacritty"
@@ -207,7 +201,14 @@ awful.screen.connect_for_each_screen(function(s)
  --awful.tag({  " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  }, s, awful.layout.layouts[1])
 
 
-awful.tag({  " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX "  }, s, awful.layout.layouts[1])
+awful.tag({  "          ", "          ",  "         ", "     ♫    ", "         " }, s, awful.layout.layouts[1])
+
+
+
+--awful.tag({  " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX "  }, s, awful.layout.layouts[1])
+
+--awful.tag({  " 1-MAIN ", " 2-WWW ", " 3-DOC ", " 4-SYS ", " 5-VBOX ", " 6-CHAT ", " 7-MUS ", " 8-VID ", " 9-GFX "  }, s, awful.layout.layouts[1])
+
 
 
 
@@ -230,10 +231,10 @@ awful.tag({  " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " 
     }
 
     -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist {
+    	s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+       	buttons = tasklist_buttons
     }
 
     -- Create the wibox
@@ -244,14 +245,16 @@ awful.tag({  " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " 
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+			
+			--spacing = 100,
+           -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            --mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
@@ -291,8 +294,18 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+   
+
+
+
+
+
+ awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
+
+
+
+
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -436,7 +449,7 @@ awful.key({ modkey, "Shift"   }, "e",  function () awful.spawn.with_shell( " ~/.
 --    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
   --            {description = "run prompt", group = "launcher"}),
 
-  awful.key({ modkey },            "r",     function () awful.spawn.with_shell("/opt/dmenu/dmenu_run_history -m 0 -fn 'Source Code Pro 12'") end,
+  awful.key({ modkey },            "r",     function () awful.spawn.with_shell("/opt/dmenu/dmenu_run_history -m 0 -nb '#000000'  -fn 'Source Code Pro 12'") end,
              {description = "run dmenu", group = "launcher"}),
     
 
@@ -465,7 +478,7 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     
 
-awful.key({ modkey, "Shift"   }, "w",      function (c) c:kill()                         end,
+awful.key({ modkey, "Shift" }, "w",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     
 
@@ -631,7 +644,7 @@ awful.rules.rules = {
           "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
-      }, properties = { floating = true, x = 1200, y = 150 }},
+      }, properties = { floating = true, x = 1150, y = 150 }},
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
