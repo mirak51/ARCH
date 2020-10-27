@@ -425,7 +425,9 @@ s.mytasklist_1 = awful.widget.tasklist(s, awful.widget.tasklist.filter.minimized
   
 
 
-s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(35), bg = theme.bg_normal, fg = theme.fg_normal })
+s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(30), bg = theme.bg_normal, fg = theme.fg_normal, border_width =1, border_color= "#00000a"
+
+ })
 
 
 
