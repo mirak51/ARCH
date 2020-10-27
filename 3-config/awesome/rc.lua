@@ -1016,6 +1016,8 @@ awful.rules.rules = {
         class = {
           
 		--  "Galculator",
+
+		  "Alacritty",
 		  "Gnome-font-viewer",
 		  "Arandr",
           "Blueman-manager",
