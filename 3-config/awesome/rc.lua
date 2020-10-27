@@ -507,8 +507,8 @@ awful.key({ modkey,           }, "i", function () awful.spawn("firefox") end,
 
 
 
-awful.key({ modkey,           }, "e", function () awful.spawn("pcmanfm") end,
-              {description = "open Pcmanfm", group = "launcher"}),
+awful.key({ modkey,           }, "e", function () awful.spawn("thunar") end,
+              {description = "open Thunar", group = "launcher"}),
 
 
 awful.key({ modkey,           }, "a", function () awful.spawn("pluma") end,
@@ -993,18 +993,6 @@ awful.rules.rules = {
 
 
 
-{ rule_any = {
-   
-        class = {
-          
-
-		   "Alacritty",
-		   
-          
-        },
-
-      
-      }, properties = { floating = true, x = 820, y = 250 }},
 
 
 
