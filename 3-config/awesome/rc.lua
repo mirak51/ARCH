@@ -993,6 +993,18 @@ awful.rules.rules = {
 
 
 
+{ rule_any = {
+   
+        class = {
+          
+
+		   "Alacritty",
+		   
+          
+        },
+
+      
+      }, properties = { floating = true, x = 820, y = 250 }},
 
 
 
@@ -1017,7 +1029,7 @@ awful.rules.rules = {
           
 		--  "Galculator",
 
-		  "Alacritty",
+		 
 		  "Gnome-font-viewer",
 		  "Arandr",
           "Blueman-manager",
