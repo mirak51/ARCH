@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# VAR1=$(echo -e 'No\nYes' | dmenu  -m 0 -fn 'Source Code Pro 12' -nb '#00000a'  -sb '#B0250A' -p "Are you sure ?")
+
+
+ VAR1=$(echo -e 'No\nYes' | dmenu -h 30  -m 0 -fn 'Source Code Pro 12' -nb '#00000a'  -sb '#B81212' -p "Are you sure ?")
+
+
+if [ "$VAR1" = "Yes" ]; 
+
+then
+
+  killall awesome 
+
+fi
+
+#B0250A
+
+# B81212

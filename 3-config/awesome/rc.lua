@@ -115,14 +115,14 @@ local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "slock"
 
 
---  ♫     
+--  ♫        
 
 
 
 -- http://fontawesome.io/cheatsheet
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "        ", "        ", "        ", "       ", "        " }
+awful.util.tagnames = { "        ", "        ", "        ", "       ", "        " }
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -511,8 +511,8 @@ awful.key({ modkey,           }, "e", function () awful.spawn("thunar") end,
               {description = "open Thunar", group = "launcher"}),
 
 
-awful.key({ modkey,           }, "a", function () awful.spawn("pluma") end,
-              {description = "open Pluma", group = "launcher"}),
+awful.key({ modkey,           }, "a", function () awful.spawn("mousepad") end,
+              {description = "open Mousepad", group = "launcher"}),
 
 
 awful.key({ modkey,           }, "z", function () awful.spawn("atril") end,
